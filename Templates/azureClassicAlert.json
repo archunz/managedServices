@@ -4,14 +4,14 @@
     "parameters": {
         "alertName": {
             "type": "string",
-            "defaultValue": "defaultVmAlert",
+            "defaultValue": "mspDefaultVmAlert",
             "metadata": {
                 "description": "Name of alert"
             }
         },
         "alertDescription": {
             "type": "string",
-            "defaultValue": "defaultVmAlert",
+            "defaultValue": "Default VM alert managed by MSP",
             "metadata": {
                 "description": "Description of alert"
             }
