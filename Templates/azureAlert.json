@@ -48,7 +48,7 @@
         },
         "metricName": {
             "type": "string",
-            "defaultValue": "metric01",
+            "defaultValue": "Percentage CPU",
             "minLength": 1,
             "metadata": {
                 "description": "Name of the metric used in the comparison to activate the alert."
@@ -78,7 +78,7 @@
         },
         "timeAggregation": {
             "type": "string",
-            "defaultValue": "Average",
+            "defaultValue": "Minimum",
             "allowedValues": [
                 "Average",
                 "Minimum",
@@ -105,7 +105,7 @@
         },
         "actionGroupId": {
             "type": "string",
-            "defaultValue": "/subscriptions/0a938bc2-0bb8-4688-bd37-9964427fe0b0/resourceGroups/Default-ActivityLogAlerts/providers/microsoft.insights/actiongroups/mspActionGroup",
+            "defaultValue": "/subscriptions/4b1a121f-fd0e-4a21-94ef-1d246437a7ca/resourceGroups/Default-ActivityLogAlerts/providers/microsoft.insights/actiongroups/Alert sink",
             "metadata": {
                 "description": "The ID of the action group that is triggered when the alert is activated or deactivated"
             }
