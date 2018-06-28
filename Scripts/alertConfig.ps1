@@ -1,5 +1,8 @@
 Write-Output "Selecting customer subscription..."
 
+Write-output "who am i?"
+get-azurermcontext
+
 Select-AzureRmSubscription -SubscriptionId '4b1a121f-fd0e-4a21-94ef-1d246437a7ca' 
 
 Write-Output "Updating VM alert config per new commit..."
