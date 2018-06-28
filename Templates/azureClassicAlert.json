@@ -25,7 +25,6 @@
         },
         "resourceId": {
             "type": "string",
-            "defaultValue": "/subscriptions/4b1a121f-fd0e-4a21-94ef-1d246437a7ca/resourceGroups/customerworkload/providers/Microsoft.Compute/virtualMachines/winwl01WinSrv",
             "metadata": {
                 "description": "Resource ID of the resource emitting the metric that will be used for the comparison."
             }
