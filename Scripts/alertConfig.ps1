@@ -20,6 +20,8 @@ Catch
 
     $VMs = Get-AzureRmVm
 
+    Write-Output "Fetched all VMs..."
+
 Try
 {  
     Foreach ($vm in $vms)
@@ -27,7 +29,7 @@ Try
         Write-Output "Deploying default alerts...."
         Write-output $vm.id
 
-        New-AzureRmResourceGroupDeployment -Name (Get-Random) `
+        New-AzureRmResourceGroupDeployment -Name mspAlert `
                                         -ResourceGroupName $vm.ResourceGroupName `
                                         -TemplateUri 'https://raw.githubusercontent.com/krnese/managedServices/master/Templates/azureClassicAlert.json' `
                                         -resourceId $vm.id `
