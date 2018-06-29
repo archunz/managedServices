@@ -79,7 +79,7 @@
         },
         "sendToServiceOwners": {
             "type": "bool",
-            "defaultValue": true,
+            "defaultValue": false,
             "metadata": {
                 "description": "Specifies whether alerts are sent to service owners"
             }
