@@ -26,7 +26,7 @@ Try
     {
         Write-Output "Deploying default alerts...."
 
-        New-AzureRmResourceGroupDeployment -Name Get-Random `
+        New-AzureRmResourceGroupDeployment -Name (Get-Random) `
                                         -ResourceGroupName $vm.ResourceGroupName `
                                         -TemplateUri 'https://raw.githubusercontent.com/krnese/managedServices/master/Templates/azureClassicAlert.json' `
                                         -resourceId $vm.id `
