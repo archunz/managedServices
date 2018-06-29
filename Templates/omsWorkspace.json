@@ -27,10 +27,6 @@
         "batch1": {
             "solutions": [
                 {
-                    "name": "[concat('Security', '(', variables('workspaceName'), ')')]",
-                    "marketplaceName": "Security"
-                },
-                {
                     "name": "[concat('AgentHealthAssessment', '(', variables('workspaceName'), ')')]",
                     "marketplaceName": "AgentHealthAssessment"
                 },
@@ -110,18 +106,6 @@
                     "kind": "AzureActivityLog",
                     "properties": {
                         "linkedResourceId": "[concat(subscription().id, '/providers/Microsoft.Insights/eventTypes/management')]"
-                    }
-                },
-                {
-                    "name": "Automation",
-                    "type": "linkedServices",
-                    "apiVersion": "2015-11-01-preview",
-                    "dependsOn": [
-                        "[resourceId('Microsoft.OperationalInsights/workspaces/', variables('workspaceName'))]",
-                        "[resourceId('Microsoft.Automation/automationAccounts/', variables('automationName'))]"
-                    ],
-                    "properties": {
-                        "resourceId": "[resourceId('Microsoft.Automation/automationAccounts/', variables('automationName'))]"
                     }
                 },
                 {
