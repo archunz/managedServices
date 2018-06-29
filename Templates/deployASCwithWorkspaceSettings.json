@@ -24,24 +24,6 @@
             "metadata": {
                 "description": "Add a phone number for security related incidents."
             }
-        },
-        "workspaceSubscriptionId": {
-            "type": "string",
-            "metadata": {
-                "description": "Specify the subscriptionId where the Log Analytics workspace is deployed."
-            }
-        },
-        "workspaceResourceGroup": {
-            "type": "string",
-            "metadata": {
-                "description": "Specify the resource group where the Log Analytics workspace is deployed."
-            }
-        },
-        "workspaceName": {
-            "type": "string",
-            "metadata": {
-                "description": "Specify the name of your Log Analytics workspace to collect ASC data."
-            }
         }
     },
     "variables": {},
