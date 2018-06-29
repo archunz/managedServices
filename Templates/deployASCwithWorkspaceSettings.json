@@ -14,6 +14,7 @@
         },
         "emailContact": {
             "type": "string",
+            "defaultValue": "john@doe.com",
             "metadata": {
                 "description": "Add one or more e-mail addresses for notificatoins."
             }
@@ -80,18 +81,6 @@
                 "pricingConfiguration": {
                     "selectedPricingTier": "Free"
                 }
-            }
-        },
-        {
-            "type": "Microsoft.Security/workspaceSettings",
-            "apiVersion": "2017-08-01-preview",
-            "name": "default",
-            "dependsOn": [
-                "[resourceId('Microsoft.Security/policies/', 'default')]"
-            ],
-            "properties": {
-                "workspaceId": "[concat('/subscriptions/', parameters('workspaceSubscriptionId'), '/resourceGroups/', parameters('workspaceResourceGroup'), '/providers/Microsoft.OperationalInsights/workspaces/', parameters('workspaceName'))]",
-                "scope": "[subscription().id]"
             }
         }
     ],
