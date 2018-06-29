@@ -18,19 +18,19 @@ Catch
 
     Write-Output "Updating VM alert config per new commit..."
 
-    $VMs = Get-AzureRmResource -ResourceType Microsoft.Compute/virtualMachines
+    $VMs = Get-AzureRmVm
 
 Try
 {  
     Foreach ($vm in $vms)
     {
         Write-Output "Deploying default alerts...."
-        Write-output $vm.ResourceId
+        Write-output $vm.id
 
         New-AzureRmResourceGroupDeployment -Name (Get-Random) `
                                         -ResourceGroupName $vm.ResourceGroupName `
                                         -TemplateUri 'https://raw.githubusercontent.com/krnese/managedServices/master/Templates/azureClassicAlert.json' `
-                                        -resourceId $vm.resourceId `
+                                        -resourceId $vm.id `
                                         -Verbose
 
         Write-Output "Done!"                                       
