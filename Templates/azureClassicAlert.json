@@ -105,7 +105,7 @@
     "resources": [
         {
             "type": "Microsoft.Insights/alertRules",
-            "name": "[parameters('alertName')]",
+            "name": "[concat(split(parameters('resourceId'),'/')[8], parameters('alertName'))]",
             "location": "[resourceGroup().location]",
             "apiVersion": "2016-03-01",
             "properties": {
