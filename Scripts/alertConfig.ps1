@@ -4,6 +4,8 @@
 
     $sub = Get-AzureRmSubscription -TenantId b2a0bb8e-3f26-47f8-9040-209289b412a8
 
+    Write-Output $sub
+
     foreach($s in $sub)
     {
         if($s.Id -ne "0a938bc2-0bb8-4688-bd37-9964427fe0b0")
@@ -11,7 +13,7 @@
          Write-Output "Iterating through customer subscriptions..."
 Try
 {
-        Select-AzureRmSubscription -SubscriptionId 4b1a121f-fd0e-4a21-94ef-1d246437a7ca -TenantId b2a0bb8e-3f26-47f8-9040-209289b412a8
+        Select-AzureRmSubscription -SubscriptionId $s.Id -TenantId b2a0bb8e-3f26-47f8-9040-209289b412a8
 }
 Catch
 {
