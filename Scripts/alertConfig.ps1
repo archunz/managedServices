@@ -1,26 +1,32 @@
+
+
+    Write-Output "Authenticating to Azure subs using SPN..."
+
+    $sub = Get-AzureRmSubscription -TenantId b2a0bb8e-3f26-47f8-9040-209289b412a8
+
+    foreach($s in $sub)
+    {
+        if($s.Id -ne "0a938bc2-0bb8-4688-bd37-9964427fe0b0")
+        {
+         Write-Output "Iterating through customer subscriptions..."
 Try
 {
-
-    Write-Output "Selecting customer subscription..."
-
-    Get-AzureRmSubscription -TenantId b2a0bb8e-3f26-47f8-9040-209289b412a8
-
-    Select-AzureRmSubscription -SubscriptionId 4b1a121f-fd0e-4a21-94ef-1d246437a7ca -TenantId b2a0bb8e-3f26-47f8-9040-209289b412a8
+        Select-AzureRmSubscription -SubscriptionId 4b1a121f-fd0e-4a21-94ef-1d246437a7ca -TenantId b2a0bb8e-3f26-47f8-9040-209289b412a8
 }
 Catch
 {
-    $ErrorMessage = 'Failed to logon to Azure...'
-    $ErrorMessage += "`n"
-    $ErrorMessage += $_
-    Write-Error -Message $ErrorMessage `
-                -ErrorAction Stop
+        $ErrorMessage = 'Failed to logon to Azure...'
+        $ErrorMessage += "`n"
+        $ErrorMessage += $_
+        Write-Error -Message $ErrorMessage `
+                    -ErrorAction Stop
 }
 
-    Write-Output "Updating VM alert config per new commit..."
+        Write-Output "Updating VM alert config per new commit..."
 
-    $VMs = Get-AzureRmVm
+        $VMs = Get-AzureRmVm
 
-    Write-Output "Fetched all VMs..."
+        Write-Output "Fetched all VMs..."
 
 Try
 {  
@@ -48,4 +54,7 @@ Catch
                 -ErrorAction Stop
 }
 
-Write-Output "Job completed"
+    Write-Output "Job completed"
+  
+  }
+}
