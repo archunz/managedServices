@@ -14,7 +14,7 @@
     },
     "resources": [
         {
-            "name": "[concat(parameters('vmName'),'/omsPolicy')]",
+            "name": "[concat(parameters('vmName'),'/omsOnboarding')]",
             "type": "Microsoft.Compute/virtualMachines/extensions",
             "location": "[parameters('location')]",
             "apiVersion": "2017-03-30",

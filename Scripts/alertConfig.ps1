@@ -41,6 +41,7 @@ Try
                                         -ResourceGroupName $vm.ResourceGroupName `
                                         -TemplateUri 'https://raw.githubusercontent.com/krnese/managedServices/master/Templates/azureClassicAlert.json' `
                                         -resourceId $vm.id `
+                                        -AsJob `
                                         -Verbose
 
         Write-Output "Done!"                                       
