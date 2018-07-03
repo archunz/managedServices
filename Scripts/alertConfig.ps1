@@ -39,8 +39,9 @@ Try
 
         New-AzureRmResourceGroupDeployment -Name mspAlert `
                                         -ResourceGroupName $vm.ResourceGroupName `
-                                        -TemplateUri 'https://raw.githubusercontent.com/krnese/managedServices/master/Templates/azureClassicAlert.json' `
+                                        -TemplateUri 'https://raw.githubusercontent.com/krnese/managedServices/vmManagement/Templates/azureClassicAlert.json' `
                                         -resourceId $vm.id `
+                                        -AsJob `
                                         -Verbose
 
         Write-Output "Done!"                                       
